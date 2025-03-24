@@ -1,5 +1,4 @@
 // Hello.Dart
-
 // void main(){
 // print("Hello, World!");
 //}
@@ -7,6 +6,7 @@
 // Excercise
 // Develop a program to calculate the shipping cost based on the destination zone
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   // and the weight of the package (you will be provided)
@@ -15,22 +15,20 @@ void main() {
 
   print("Enter your destination zone: ");
   String? destinationZone = stdin.readLineSync();
-// if the destination zone is XYZ the shipping cost is $5 per kilogram
+  double cost = 0;
+  // if the destination zone is XYZ the shipping cost is $5 per kilogram
   if (destinationZone == "XYZ") {
-    print(packageWeight * 5);
+    cost = packageWeight * 5;
     // if the destination zone is ABC  the shipping cost is $7 per kilogram
-  }else if (destinationZone == "ABC") {
-    print(packageWeight * 7);
+  } else if (destinationZone == "ABC") {
+    cost = packageWeight * 7;
     // if the destination zone is PQR the shipping cost is $10 per kilogram
-  } else if (destinationZone == "PQR" ){
-    print(packageWeight * 10);
+  } else if (destinationZone == "PQR") {
+    cost = packageWeight * 10;
   } else {
-    
-
-// ELSE display an error message "Invalid Destination Zone"
+    // ELSE display an error message "Invalid Destination Zone"
     print("Invalid Destination Zone");
   }
 
-
-
+  print('The shipping cost is: $cost');
 }
