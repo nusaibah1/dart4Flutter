@@ -6,7 +6,6 @@
 // Excercise
 // Develop a program to calculate the shipping cost based on the destination zone
 import 'dart:io';
-import 'dart:math';
 
 void main() {
   // and the weight of the package (you will be provided)
